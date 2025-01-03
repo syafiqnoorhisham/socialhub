@@ -6,10 +6,15 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'your-secret-key-here'
 DEBUG = True
 ALLOWED_HOSTS = ['*']
-STATIC_URL = '/static/'
 ROOT_URLCONF = 'config.urls'
+
+# Media files configuration
 MEDIA_URL = '/media/'
 MEDIA_ROOT = os.path.join(BASE_DIR, 'media')
+
+# Update URLs configuration to serve media files in development
+STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 
 INSTALLED_APPS = [
