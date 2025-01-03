@@ -2,6 +2,8 @@
 
 A social media platform built with Django REST Framework and vanilla JavaScript. Users can create accounts, share posts with images, and interact through comments.
 
+Demo: [https://socialhub-1-nvc4.onrender.com](https://socialhub-1-nvc4.onrender.com)
+
 ## Features
 
 - User authentication using JWT tokens
@@ -17,7 +19,8 @@ A social media platform built with Django REST Framework and vanilla JavaScript.
 - Django 5.1
 - Django REST Framework
 - Simple JWT for authentication
-- SQLite database
+- SQLite database (local)
+- PostgreSQL (production)
 - Pillow for image handling
 
 ### Frontend
@@ -29,8 +32,9 @@ A social media platform built with Django REST Framework and vanilla JavaScript.
 
 ### Deployment
 
-- Docker & Docker Compose
-- Nginx for serving static files
+- Deployed on Render.com
+- Automatic deployments from GitHub
+- SSL enabled
 
 ## Getting Started
 
@@ -38,15 +42,14 @@ A social media platform built with Django REST Framework and vanilla JavaScript.
 
 - Python 3.11+
 - pip
-- Docker (optional)
-- Docker Compose (optional)
+- Git
 
 ### Local Development Setup
 
 1. Clone the repository:
 
 ```bash
-git clone https://github.com/yourusername/socialhub.git
+git clone https://github.com/syafiqnoorhisham/socialhub.git
 cd socialhub
 ```
 
@@ -72,25 +75,6 @@ The application will be available at:
 
 - Frontend: http://localhost:8080
 - Backend API: http://localhost:8000
-
-### Docker Setup
-
-1. Build the containers:
-
-```bash
-docker-compose build
-```
-
-2. Start the services:
-
-```bash
-docker-compose up
-```
-
-The application will be available at:
-
-- Frontend: http://localhost
-- Backend API: http://localhost/api
 
 ## API Endpoints
 
@@ -121,21 +105,22 @@ socialhub/
 │   ├── users/           # User authentication app
 │   ├── posts/           # Posts and comments app
 │   ├── media/           # Uploaded files
-│   ├── Dockerfile
 │   └── requirements.txt
 ├── frontend/
 │   ├── css/
 │   ├── js/
-│   ├── index.html
-│   ├── Dockerfile
-│   └── nginx.conf
-└── docker-compose.yml
+│   └── index.html
+└── README.md
 ```
 
-## Testing the Application
+## Live Demo
 
-1. Register a new user account
+Visit [https://socialhub-1-nvc4.onrender.com](https://socialhub-1-nvc4.onrender.com) to see the application in action.
+
+To test the application:
+
+1. Register a new account
 2. Login with your credentials
-3. Create a post with an image and caption
-4. Add comments to posts
-5. Try editing and deleting your own posts/comments
+3. Create posts with images and captions
+4. Comment on posts
+5. Try editing and deleting your own content
