@@ -1,0 +1,13 @@
+services:
+  - type: web
+    name: socialhub
+    env: docker
+    buildCommand: docker build -t socialhub .
+    startCommand: docker run -p $PORT:8000 socialhub
+    envVars:
+      - key: SECRET_KEY
+        generateValue: true
+      - key: DEBUG
+        value: false
+      - key: DJANGO_ALLOWED_HOSTS
+        value: .onrender.com
